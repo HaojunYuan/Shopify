@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-apiKey = "123sk-R4qLsFpBn1O16fM6utWdT3BlbkFJXk9o8WsVrk90nvlQY4IQ"
+const apiKey = "123sk-R4qLsFpBn1O16fM6utWdT3BlbkFJXk9o8WsVrk90nvlQY4IQ"
 
 const responses = []
 
