@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 
+const apiKey = "123sk-R4qLsFpBn1O16fM6utWdT3BlbkFJXk9o8WsVrk90nvlQY4IQ"
+
 const responses = []
 
 function App() {
@@ -24,7 +26,7 @@ function App() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.KEY}`,
+        Authorization: `Bearer ${apiKey.substr(3)}`,
       },
       body: JSON.stringify(data),
     }).then(res => res.json())
