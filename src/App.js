@@ -24,7 +24,7 @@ function App() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.key}`,
+        Authorization: `Bearer ${process.env.KEY}`,
       },
       body: JSON.stringify(data),
     }).then(res => res.json())
