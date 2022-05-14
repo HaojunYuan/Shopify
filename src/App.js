@@ -32,6 +32,7 @@ function App() {
     }).then(res => res.json())
       .then(data => {
         const response = {
+          engine: engine,
           prompt: prompt,
           data: data
         }
@@ -39,6 +40,7 @@ function App() {
         console.log(responses);
         document.getElementById('responses').innerHTML = responses.map(response => {
           return `<li>
+          <p>Engine: ${response.engine}</p>
           <p>Prompt: ${response.prompt}</p>
           <p>Response: ${response.data.choices[0].text}</p>
           </li>`
