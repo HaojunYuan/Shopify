@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 
-const apiKey = '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'
 const responses = []
 
 function App() {
@@ -25,7 +24,7 @@ function App() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${apiKey}`,
+        Authorization: `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
       },
       body: JSON.stringify(data),
     }).then(res => res.json())
@@ -51,7 +50,7 @@ function App() {
       <p>Enter Prompt</p>
       <textarea name="prompt" id="prompt" cols="50" rows="10"></textarea>
       <br></br>
-      <label for="engine">Select Engine:</label>
+      <label htmlFor="engine">Select Engine:</label>
       <select name="engine" id="engine">
         <option value="text-curie-001">text-curie-001</option>
         <option value="text-davinci-002">text-davinci-002</option>
